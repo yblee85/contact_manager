@@ -22,18 +22,38 @@
    DB_PORT = 5432
    DB_NAME = postgres
    DB_USER = postgres
+   DB_PASS =
+   API_KEY = 
+   PORT=8081
    ```
+
+   
 
 3. db password you created from 1, paste it in api/{.env file} -> DB_PASS
 
 4. generate random key and put it in API_KEY
 
+5. `$ npm install`
+
+6. `$ node server.js`
 
 
-### Setup frontend .env
 
-5. create .env.development file in frontend root dir ( copy and paste from .env.sample )
-6. replace api key with you generated in 4.
+### Setup frontend
+
+5. create .env file in frontend/webserver dir ( copy and paste from .env.sample )
+
+6. Enter .env info
+
+   ```
+   API_KEY={API_FOR_API}
+   API_HOST=localhost
+   API_PORT=8081
+   PORT=8080
+   ```
+
+   replace api key with you generated in 4.
+
 7. if you run in local, host and port would be localhost and 8080
 
 
@@ -52,10 +72,10 @@
    $ node server.js
    ```
 
-10. in frontend directory
+10. in frontend/webserver directory
 
     ```
-    $ npm start
+    $ node server.js
     ```
 
 
